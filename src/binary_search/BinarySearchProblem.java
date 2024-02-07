@@ -1,22 +1,32 @@
+import java.util.Arrays;
+
 public class BinarySearchProblem {
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 8, 9, 12, 15, 17};
-        int target = 14;
-        System.out.println(ceiling(arr, target));
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {8, 9, 12}};
+        int target = 3;
+        //System.out.println(ceiling(arr, target));
         //System.out.println(elementPos(arr, target));
+        System.out.println(Arrays.toString(searchInMatrix(arr, target)));
     }
 
-//    static int[] elementPos(int[] nums, int target) {
-//        int start = 0;
-//        int end = nums.length - 1;
-//        int[] pos = {-1, -1};
-//
-//        while(start <= end) {
-//
-//        }
-//        return pos;
-//    }
+
+    //7-2-24
+    //Linear Search in 2D array
+
+    static int[] searchInMatrix(int[][] arr, int target) {
+        int[] result = {-1, -1};
+
+        for(int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr.length; col++) {
+                if (arr[row][col] == target) {
+                    result[0] = row;
+                    result[1] = col;
+                }
+            }
+        }
+        return result;
+    }
 
     static int ceiling(int[] arr, int target) {
         int start = 0;
