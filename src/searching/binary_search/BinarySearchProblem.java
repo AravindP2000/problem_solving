@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class BinarySearchProblem {
 
     public static void main(String[] args) {
-        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {8, 9, 12}};
+        int[] arr = {1, 2, 3, 4, 5, 6, 8, 9, 12};
         int target = 3;
-        //System.out.println(ceiling(arr, target));
-        //System.out.println(elementPos(arr, target));
-        System.out.println(Arrays.toString(searchInMatrix(arr, target)));
+        System.out.println(ceiling(arr, target));
+        System.out.println(floor(arr, target));
+        //System.out.println(Arrays.toString(searchInMatrix(arr, target)));
     }
 
 
